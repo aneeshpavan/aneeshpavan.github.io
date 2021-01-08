@@ -384,66 +384,66 @@ and (orientation: landscape){
     }
 }
 
-@media only screen /*Iphone XR Portrait*/
-    and (device-width:414px)
-    and (device-height: 896px)
+@media only screen /*Iphone XR and 11 Portrait*/
+    and (device-width:828px)
+    and (device-height: 1792px)
     and (orientation: portrait){
         .lone{
-            transform: scale(0.5);
-            margin-top: 480px;
+            transform: scale(0.95);
+            margin-top: 1200px;
             width: auto;
-            margin-left: -85px;
+            margin-left: 110px;
         }
         .back{
             background-image: url('formobile.jpg'); 
             width: 100%; 
             background-size: cover;
-            width: 126.5%;
+            width: 113%;
             margin-left: -110px;
         }
         .whatido{
-            margin-top: 896px !important;
+            margin-top: 1792px !important;
         }
         .thisiswhat{
-            font-size: 195% !important;
+            font-size: 350% !important;
         }
         .thisiswork{
-            font-size: 195% !important;
+            font-size: 350% !important;
         }
         .connect{
-            font-size: 195% !important;
+            font-size: 350% !important;
         }
         .content p{
-            font-size: 80%;
+            font-size: 75%;
         }
         .column p{
             font-size: 15px !important;
         }
     }
 
-@media only screen /*Iphone XR Landscape*/
-    and (device-width:896px)
-    and (device-height: 414px)
+@media only screen /*Iphone XR and 11 Landscape*/
+    and (device-width:1792px)
+    and (device-height: 828px)
     and (orientation: landscape){
         .lone{
-            transform: scale(0.5);
+            
             width: 100%;
-            margin-top: 20px;
+            margin-top: 250px;
         }
         .whatido{
-            margin-top: 414px !important;
+            margin-top: 828px !important;
         }
         .thisiswhat{
-            font-size: 250% !important;
+            font-size: 350% !important;
         }
         .thisiswork{
-            font-size: 250% !important;
+            font-size: 350% !important;
         }
         .connect{
-            font-size: 250% !important;
+            font-size: 350% !important;
         }
         .content p{
-            font-size: 75%;
+            font-size: 100%;
         }
         .column p{
             font-size: 16px !important;
