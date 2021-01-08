@@ -385,33 +385,33 @@ and (orientation: landscape){
 }
 
 @media only screen /*Iphone XR and 11 Portrait*/
-    and (device-width:828px)
-    and (device-height: 1792px)
+    and (min-width:414px)
+    and (min-height: 896px)
     and (orientation: portrait){
         .lone{
-            transform: scale(0.95);
-            margin-top: 1200px;
+            transform: scale(0.5);
+            margin-top: 500px;
             width: auto;
-            margin-left: 110px;
+            margin-left: -130px;    
         }
         .back{
             background-image: url('formobile.jpg'); 
-            width: 100%; 
+            width: 120%; 
             background-size: cover;
-            width: 113%;
-            margin-left: -110px;
+            width: 114%;
+            margin-left: -60px;
         }
         .whatido{
-            margin-top: 1792px !important;
+            margin-top: 896px !important;
         }
         .thisiswhat{
-            font-size: 350% !important;
+            font-size: 200% !important;
         }
         .thisiswork{
-            font-size: 350% !important;
+            font-size: 200% !important;
         }
         .connect{
-            font-size: 350% !important;
+            font-size: 200% !important;
         }
         .content p{
             font-size: 75%;
@@ -422,16 +422,16 @@ and (orientation: landscape){
     }
 
 @media only screen /*Iphone XR and 11 Landscape*/
-    and (device-width:1792px)
-    and (device-height: 828px)
+    and (min-width:896px)
+    and (min-height: 414px)
     and (orientation: landscape){
         .lone{
-            
+            margin-top: 10px;
+            transform: scale(0.5);
             width: 100%;
-            margin-top: 250px;
         }
         .whatido{
-            margin-top: 828px !important;
+            margin-top: 414px !important;
         }
         .thisiswhat{
             font-size: 350% !important;
