@@ -5,6 +5,7 @@ body{
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .back{
@@ -88,6 +89,12 @@ html, body {
     white-space: nowrap;
     animation: two 2s;
 }
+
+.aneesh:hover{
+    color:  #FCDC00;
+    cursor: pointer;
+}
+
 
 @keyframes two{
     0%{opacity: 0%;}
@@ -928,6 +935,15 @@ and (max-device-width : 1280px) {
     margin-bottom: 1.3em;
     margin-top: 0;
     line-height: inherit;
+}
+.stu:hover{
+    color: #FCDC00;
+}
+.line{
+    color:white;
+}
+.color:hover{
+    color: #FCDC00;
 }
 .row{
     justify-content: center;
