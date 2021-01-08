@@ -340,7 +340,6 @@ and (orientation: portrait){
     .back{
         background-image: url('formobile.jpg'); 
         width: 100%;
-        background-position:fixed; 
         background-size: cover;
     }
     .thisiswhat{
@@ -384,6 +383,72 @@ and (orientation: landscape){
         font-size: 75%;
     }
 }
+
+@media only screen /*Iphone XR Portrait*/
+    and (device-width:414px)
+    and (device-height: 896px)
+    and (orientation: portrait){
+        .lone{
+            transform: scale(0.5);
+            margin-top: 480px;
+            width: auto;
+            margin-left: -85px;
+        }
+        .back{
+            background-image: url('formobile.jpg'); 
+            width: 100%; 
+            background-size: cover;
+            width: 126.5%;
+            margin-left: -110px;
+        }
+        .whatido{
+            margin-top: 896px !important;
+        }
+        .thisiswhat{
+            font-size: 195% !important;
+        }
+        .thisiswork{
+            font-size: 195% !important;
+        }
+        .connect{
+            font-size: 195% !important;
+        }
+        .content p{
+            font-size: 80%;
+        }
+        .column p{
+            font-size: 15px !important;
+        }
+    }
+
+@media only screen /*Iphone XR Landscape*/
+    and (device-width:896px)
+    and (device-height: 414px)
+    and (orientation: landscape){
+        .lone{
+            transform: scale(0.5);
+            width: 100%;
+            margin-top: 20px;
+        }
+        .whatido{
+            margin-top: 414px !important;
+        }
+        .thisiswhat{
+            font-size: 250% !important;
+        }
+        .thisiswork{
+            font-size: 250% !important;
+        }
+        .connect{
+            font-size: 250% !important;
+        }
+        .content p{
+            font-size: 75%;
+        }
+        .column p{
+            font-size: 16px !important;
+        }
+    }
 
 @media only screen /*Iphone X Portrait*/
     and (device-width: 375px)
@@ -1288,4 +1353,3 @@ a{
     font-size: inherit;
     line-height: inherit;
 }
-/* Media Query for laptop touch and mobile are pending*/
