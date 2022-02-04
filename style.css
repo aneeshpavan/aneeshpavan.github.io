@@ -302,7 +302,12 @@ a{
     transform: scale(1.05);
 	transition: all ease 0.2s;
 }
-
+.card:hover svg{
+    filter: invert();
+}
+.card:hover svg:hover{
+    filter: brightness();
+}
 .heading
 {
     color: black;
