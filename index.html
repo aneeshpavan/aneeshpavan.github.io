@@ -4,17 +4,65 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css">
-    <body>
+        <script>
+            var app = document.getElementsByTagName("BODY")[0];
+            if (localStorage.lightMode == "dark") {
+                app.setAttribute("light-mode", "dark");
+            }
+            
+            function toggle_light_mode() {
+            var app = document.getElementsByTagName("BODY")[0];
+            if (localStorage.lightMode == "light") {
+                localStorage.lightMode = "dark";
+                app.setAttribute("light-mode", "dark");
+            } 
+            else {
+                localStorage.lightMode = "light";
+                app.setAttribute("light-mode", "light");
+                }       
+            }
+            window.addEventListener("storage", function () {
+                if (localStorage.lightMode == "dark") {
+                    app.setAttribute("light-mode", "dark");
+                } else {
+                    app.setAttribute("light-mode", "light");
+                }
+            }, false);
+
+            var btn = $('#scrollup');
+
+            $(window).scroll(function() {
+              if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+              } else {
+                btn.removeClass('show');
+              }
+            });
+
+            btn.on('click', function(e) {
+              e.preventDefault();
+              $('html, body').animate({scrollTop:0}, '300');
+            });
+
+            </script>
+    </head>
+    <body light-mode="dark">
         <div class="row">
+            <p class="simple dark">DARK</p>
+            <button class="light-mode-button" onclick="toggle_light_mode()">
+                <span></span>
+                <span></span>
+            </button>
+            <p class="simple light">LIGHT</p>
             <div class="container">
                 <div class="col-lg-7 col-md-7 intro">
                         <h2 class="hello">Helloooo,</h2>
                         <h2 class="am">I'm</h2>
                         <a href="https://www.instagram.com/anee_shh/" target="_blank"><h2 class="aneesh">Aneesh Prodduturu</h2></a>
                         <div class="resume">
-                        <a href="Resume-Aneesh.pdf" target="_blank" class="latestworks btn" style="text-decoration:none;color:#FFFFFF" role="button">My Resume</a> &nbsp;
-                        <a href="#mywork" class="latestworks btn" style="text-decoration:none;color:#FFFFFF" role="button">My Works</a> &nbsp;
-                        <a href="#techskill" class="latestworks btn" style="text-decoration:none;color:#FFFFFF" role="button">My Skills</a>
+                        <a href="Resume-Aneesh.pdf" target="_blank" class="latestworks btn" style="text-decoration:none;" role="button">My Resume</a> &nbsp;
+                        <a href="#mywork" class="latestworks btn" style="text-decoration:none;" role="button">My Works</a> &nbsp;
+                        <a href="#techskill" class="latestworks btn" style="text-decoration:none;" role="button">My Skills</a>
                         </div>
                 </div>
                 <div class="col-lg-5 col-md-5">
@@ -26,7 +74,7 @@
         <div class="whatido">
             <div>
                 <div class="top">
-                    <h2 class="thisiswhat"><span style="color:#FFFFFF; margin-right: 15px;">.</span>Who am I<span style="color:#FFFFFF; margin-left: 15px;">.</span></h2>
+                    <h2 class="thisiswhat"><span class="dot" style="margin-right: 15px;">.</span>Who am I<span class="dot" style="margin-left: 15px;">.</span></h2>
                 </div>
             </div>
         </div>
@@ -38,7 +86,7 @@
         </section>
         <section id="mid-2">
                 <div class="top" id="techskill">
-                    <h2 class="thisiswhat"><span style="color:#FFFFFF; margin-right: 15px;">.</span>Self-Taught Skills<span style="color: #FFFFFF; margin-left: 15px;">.</span></h2>
+                    <h2 class="thisiswhat"><span class="dot" style="margin-right: 15px;">.</span>Self-Taught Skills<span class="dot" style="margin-left: 15px;">.</span></h2>
                 </div>
         <div class="content">
             <div class="row">
@@ -74,7 +122,7 @@
     </section>
     <section id="mid-3">
                 <div class="top">
-                    <h2 class="thisiswhat"><span style="color:#FFFFFF; margin-right: 15px;">.</span>Technical Skills<span style="color: #FFFFFF; margin-left: 15px;">.</span></h2>
+                    <h2 class="thisiswhat"><span class="dot" style="margin-right: 15px;">.</span>Technical Skills<span class="dot" style="margin-left: 15px;">.</span></h2>
                 </div>
         <div class="content">
             <div class="row">
@@ -138,9 +186,9 @@
         </div>
     </section>
         <div class="top">
-            <h2 class="thisiswhat"><span style="color:#FFFFFF; margin-right: 15px;">.</span>My Projects<span style="color: #FFFFFF; margin-left: 15px;">.</span></h2>
+            <h2 class="thisiswhat"><span class="dot" style="margin-right: 15px;">.</span>My Projects<span class="dot" style="margin-left: 15px;">.</span></h2>
         </div>
-        <div class="mt-0">
+        <div class="mt-0 cardback">
             <div class="row mt-0">
                 <div class="col-md-4 p-5">
                     <div class="card p-4 pt-4">
@@ -344,7 +392,7 @@
         <div class="mywork" id="mywork">
             <div class="matter">
                 <div class="top">
-                    <h2 class="thisiswork"><span style="color:#FFFFFF; margin-right: 15px;">.</span>My Works<span style="color: #FFFFFF; margin-left: 15px;">.</span></h2>
+                    <h2 class="thisiswork"><span class="dot" style="margin-right: 15px;">.</span>My Works<span class="dot" style="margin-left: 15px;">.</span></h2>
                 </div>
             </div>
         </div>
@@ -438,7 +486,7 @@
                     <div class="bottomwrap">
                         <div class="widget">
                             <h2 class="connect">
-                                <span style="color:#FFFFFF; margin-right: 15px;">.</span>Connect With Me<span style="color: #FFFFFF; margin-left: 15px;">.</span>
+                                <span class="dot" style="margin-right: 15px;">.</span>Connect With Me<span class="dot" style="margin-left: 15px;">.</span>
                             </h2>
                         </div>
                     </div>
@@ -559,3 +607,4 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>
+
