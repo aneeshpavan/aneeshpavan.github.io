@@ -3,6 +3,7 @@
         <title>Aneesh Prodduturu</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
         <script>
             var app = document.getElementsByTagName("BODY")[0];
@@ -29,24 +30,14 @@
                 }
             }, false);
 
-            var btn = $('#scrollup');
-
-            $(window).scroll(function() {
-              if ($(window).scrollTop() > 300) {
-                btn.addClass('show');
-              } else {
-                btn.removeClass('show');
-              }
+            window.addEventListener('scroll', function() {
+                var scrolled = document.querySelector('.scrollbutton');
+                scrolled.classList.toggle("active", window.scrollY > 180)
             });
-
-            btn.on('click', function(e) {
-              e.preventDefault();
-              $('html, body').animate({scrollTop:0}, '300');
-            });
-
             </script>
     </head>
     <body light-mode="dark">
+        <a href="#"><i class="fas fa-arrow-up scrollbutton"></i></a>
         <div class="row">
             <p class="simple dark">DARK</p>
             <button class="light-mode-button" onclick="toggle_light_mode()">

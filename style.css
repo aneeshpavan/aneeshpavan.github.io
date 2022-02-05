@@ -609,3 +609,31 @@ body[light-mode=light] .carousel-control-next-icon{
 body[light-mode=light] .carousel-control-prev-icon{
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
 }
+
+.scrollbutton{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: var(--yellow);
+    bottom: 40px;
+    right: 50px;
+    z-index: 999;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: black;
+    font-size: large;
+    border-radius:50%;
+    visibility: hidden;
+    opacity: 0;
+    scroll-behavior: smooth;
+}
+body[light-mode=light] .scrollbutton{
+    background: var(--blue);
+    color: white;
+}
+.scrollbutton.active{
+    opacity: 1;
+    visibility: visible;
+    scroll-behavior: smooth;
+}
