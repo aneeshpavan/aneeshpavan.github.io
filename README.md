@@ -5,3 +5,5 @@
 
 
 ![Profile View Counter](https://komarev.com/ghpvc/?username=aneeshpavan)
+
+![Your Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=aneeshpavan&theme=blue-green)
