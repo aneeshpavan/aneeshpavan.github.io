@@ -32,13 +32,17 @@ html, body {
 }
 .image
 {
-    content:url("mine.webp");
+    content:url("mineone.webp");
     width:100%;
     border-radius: 100%;
-    margin-top: 5%;
-    transform: scale(0.9);
-    
+    margin-top: 3%;
+    transform: scale(0.7);
 }
+
+body[light-mode=light] .image{
+    content: url("minetwo.webp");
+}
+
 .hello{
     overflow: hidden;
     white-space: nowrap;
@@ -636,3 +640,4 @@ body[light-mode=light] .scrollbutton{
     visibility: visible;
     scroll-behavior: smooth;
 }
+

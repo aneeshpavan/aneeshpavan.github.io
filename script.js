@@ -2,7 +2,6 @@ $(document).ready(function () {
     $('.carousel').carousel({
         interval: 3000
         });
-            
     $('.carousel').carousel('cycle');
 });
 
@@ -13,6 +12,7 @@ if (localStorage.lightMode == "dark") {
 
 function toggle_light_mode() {
 var app = document.getElementsByTagName("BODY")[0];
+var rightimage = document.getElementById("rightimg");
 if (localStorage.lightMode == "light") {
     localStorage.lightMode = "dark";
     app.setAttribute("light-mode", "dark");
